@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rumor Media</title>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){
+if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1254907010139384');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1254907010139384&ev=PageView&noscript=1"
+/></noscript>
+
+<style>
+body {
+margin:0;
+font-family: Arial;
+background: linear-gradient(135deg,#0a0e27,#1a0b2e);
+color:white;
+text-align:center;
+}
+
+.container {padding:30px 20px;}
+
+h1 {font-size:32px; margin-bottom:10px;}
+
+.subtitle {opacity:0.85; margin-bottom:20px;}
+
+.btn {
+background:linear-gradient(45deg,#00ff88,#00d9ff);
+color:black;
+padding:14px 28px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+display:inline-block;
+margin:10px;
+transition:0.3s;
+box-shadow:0 0 20px rgba(0,255,136,0.3);
+}
+.btn:hover {transform:scale(1.05);}
+
+.secondary {
+background:transparent;
+border:1px solid #00ff88;
+color:#00ff88;
+}
+
+.box {
+background:rgba(255,255,255,0.05);
+padding:18px;
+margin:12px auto;
+border-radius:12px;
+max-width:400px;
+}
+
+.section {margin-top:35px;}
+
+.review {
+background:rgba(255,255,255,0.05);
+padding:12px;
+border-radius:10px;
+margin:8px auto;
+max-width:350px;
+font-size:14px;
+}
+
+.countdown {color:#00ff88; margin-bottom:10px;}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚀 خلي صفحتك تبان قوية وتجذب العملاء</h1>
+<p class="subtitle">عدد المتابعين مش بس رقم… هو ثقة أول نظرة</p>
+
+<div class="countdown" id="timer">⏳ عرض محدود: 10:00</div>
+
+<!-- CTA رئيسي -->
+<a class="btn"
+href="https://wa.me/12266771434?text=بدي خدمة متابعين - جاي من الإعلان"
+onclick="fbq('track','InitiateCheckout');">
+🔥 اطلب الخدمة الآن
+</a>
+
+<!-- زر متابعة الصفحة -->
+<a class="btn secondary"
+href="https://www.facebook.com/RumorForMedia/"
+target="_blank"
+onclick="fbq('track','Lead');">
+👍 تابع صفحتنا وشوف النتائج
+</a>
+
+<div class="section">
+<div class="box">✔️ رفع عدد المتابعين بسرعة</div>
+<div class="box">✔️ تحسين شكل الصفحة والمصداقية</div>
+<div class="box">✔️ مناسب للبراندات والبدايات</div>
+</div>
+
+<div class="section">
+<h2>📊 شو رح تستفيد؟</h2>
+<div class="box">📈 صفحة أقوى = ثقة أعلى</div>
+<div class="box">💰 عملاء أكثر بدون مجهود</div>
+<div class="box">🔥 ظهور احترافي قدام المنافسين</div>
+</div>
+
+<div class="section">
+<h2>💬 آراء العملاء</h2>
+<div class="review">"صفحتى صارت تبان احترافية فورًا"</div>
+<div class="review">"عدد الرسائل زاد بعد الخدمة"</div>
+<div class="review">"فرق كبير بالمصداقية"</div>
+</div>
+
+<!-- CTA ثاني -->
+<a class="btn"
+href="https://wa.me/12266771434?text=جاهز أبدأ خدمة المتابعين"
+onclick="fbq('track','InitiateCheckout');">
+🚀 احجز الآن
+</a>
+
+</div>
+
+<script>
+let time = 600;
+let timer = document.getElementById("timer");
+
+setInterval(()=>{
+let min = Math.floor(time/60);
+let sec = time % 60;
+timer.innerHTML = "⏳ عرض محدود: " + min + ":" + (sec<10?"0"+sec:sec);
+time--;
+if(time<0) time=600;
+},1000);
+</script>
+
+</body>
+</html>
