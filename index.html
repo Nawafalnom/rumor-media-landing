@@ -2,20 +2,20 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="theme-color" content="#0a1424">
 <title>Rumor Media</title>
 
-<!-- Meta Pixel -->
+<!-- Meta Pixel Code -->
 <script>
-!function(f,b,e,v,n,t,s){
-if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)
-}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1254907010139384');
 fbq('track', 'PageView');
 </script>
@@ -23,130 +23,137 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=1254907010139384&ev=PageView&noscript=1"
 /></noscript>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800&display=swap" rel="stylesheet">
+
 <style>
-body {
-margin:0;
-font-family: Arial;
-background: linear-gradient(135deg,#0a0e27,#1a0b2e);
-color:white;
-text-align:center;
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{
+  font-family:'Tajawal',system-ui,-apple-system,sans-serif;
+  color:#fff;
+  background:radial-gradient(120% 80% at 50% 0%,#1a2540 0%,#0a1424 60%,#050912 100%);
+  min-height:100dvh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.card{
+  width:100%;
+  max-width:420px;
+  text-align:center;
+  animation:rise .55s cubic-bezier(.2,.8,.2,1) both;
+}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+
+.logo{
+  width:72px;height:72px;
+  margin:0 auto 28px;
+  border-radius:20px;
+  background:linear-gradient(135deg,#c084fc,#a855f7);
+  display:grid;place-items:center;
+  font-size:36px;
+  box-shadow:0 14px 36px rgba(192,132,252,.28);
 }
 
-.container {padding:30px 20px;}
-
-h1 {font-size:32px; margin-bottom:10px;}
-
-.subtitle {opacity:0.85; margin-bottom:20px;}
-
-.btn {
-background:linear-gradient(45deg,#00ff88,#00d9ff);
-color:black;
-padding:14px 28px;
-border-radius:12px;
-text-decoration:none;
-font-weight:bold;
-display:inline-block;
-margin:10px;
-transition:0.3s;
-box-shadow:0 0 20px rgba(0,255,136,0.3);
+h1{
+  font-size:clamp(24px,6vw,30px);
+  font-weight:800;
+  line-height:1.25;
+  letter-spacing:-.5px;
+  margin-bottom:10px;
 }
-.btn:hover {transform:scale(1.05);}
-
-.secondary {
-background:transparent;
-border:1px solid #00ff88;
-color:#00ff88;
+.tagline{
+  color:#94a3b8;
+  font-size:15px;
+  font-weight:500;
+  margin-bottom:36px;
 }
+.tagline b{color:#cbd5e1;font-weight:600}
 
-.box {
-background:rgba(255,255,255,0.05);
-padding:18px;
-margin:12px auto;
-border-radius:12px;
-max-width:400px;
+.cta-primary{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  color:#fff;
+  font-family:inherit;
+  font-size:17px;
+  font-weight:700;
+  padding:18px 24px;
+  border-radius:14px;
+  text-decoration:none;
+  width:100%;
+  margin-bottom:12px;
+  box-shadow:0 12px 32px rgba(37,211,102,.32),inset 0 1px 0 rgba(255,255,255,.18);
+  transition:transform .15s ease,box-shadow .15s ease;
 }
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 16px 40px rgba(37,211,102,.42)}
+.cta-primary:active{transform:translateY(0)}
+.cta-primary svg{width:22px;height:22px;flex-shrink:0}
 
-.section {margin-top:35px;}
-
-.review {
-background:rgba(255,255,255,0.05);
-padding:12px;
-border-radius:10px;
-margin:8px auto;
-max-width:350px;
-font-size:14px;
+.cta-secondary{
+  display:inline-block;
+  color:#64748b;
+  font-size:14px;
+  font-weight:500;
+  text-decoration:none;
+  padding:10px 16px;
+  border-radius:8px;
+  transition:color .15s ease;
 }
+.cta-secondary:hover{color:#cbd5e1}
 
-.countdown {color:#00ff88; margin-bottom:10px;}
-
+.trust{
+  margin-top:36px;
+  padding-top:24px;
+  border-top:1px solid rgba(255,255,255,.06);
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+  color:#64748b;
+  font-size:13px;
+  font-weight:500;
+}
+.trust span{display:inline-flex;align-items:center;gap:6px}
+.trust b{color:#cbd5e1;font-weight:600}
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<main class="card">
+  <div class="logo">📣</div>
 
-<h1>🚀 خلي صفحتك تبان قوية وتجذب العملاء</h1>
-<p class="subtitle">عدد المتابعين مش بس رقم… هو ثقة أول نظرة</p>
+  <h1>Rumor Media</h1>
+  <p class="tagline"><b>رد فوري</b> · <b>تنفيذ احترافي</b></p>
 
-<div class="countdown" id="timer">⏳ عرض محدود: 10:00</div>
+  <a class="cta-primary"
+     href="https://wa.me/12266771434?text=مرحبا، وصلني إعلانكم وأرغب بمعرفة تفاصيل خدماتكم."
+     onclick="fbq('track','InitiateCheckout');">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    ابدأ المحادثة عبر واتساب
+  </a>
 
-<!-- CTA رئيسي -->
-<a class="btn"
-href="https://wa.me/12266771434?text=بدي خدمة متابعين - جاي من الإعلان"
-onclick="fbq('track','InitiateCheckout');">
-🔥 اطلب الخدمة الآن
-</a>
+  <a class="cta-secondary"
+     href="https://www.facebook.com/RumorForMedia/"
+     target="_blank"
+     rel="noopener"
+     onclick="fbq('track','Lead');">
+    تابعنا على فيسبوك ←
+  </a>
 
-<!-- زر متابعة الصفحة -->
-<a class="btn secondary"
-href="https://www.facebook.com/RumorForMedia/"
-target="_blank"
-onclick="fbq('track','Lead');">
-👍 تابع صفحتنا وشوف النتائج
-</a>
-
-<div class="section">
-<div class="box">✔️ رفع عدد المتابعين بسرعة</div>
-<div class="box">✔️ تحسين شكل الصفحة والمصداقية</div>
-<div class="box">✔️ مناسب للبراندات والبدايات</div>
-</div>
-
-<div class="section">
-<h2>📊 شو رح تستفيد؟</h2>
-<div class="box">📈 صفحة أقوى = ثقة أعلى</div>
-<div class="box">💰 عملاء أكثر بدون مجهود</div>
-<div class="box">🔥 ظهور احترافي قدام المنافسين</div>
-</div>
-
-<div class="section">
-<h2>💬 آراء العملاء</h2>
-<div class="review">"صفحتى صارت تبان احترافية فورًا"</div>
-<div class="review">"عدد الرسائل زاد بعد الخدمة"</div>
-<div class="review">"فرق كبير بالمصداقية"</div>
-</div>
-
-<!-- CTA ثاني -->
-<a class="btn"
-href="https://wa.me/12266771434?text=جاهز أبدأ خدمة المتابعين"
-onclick="fbq('track','InitiateCheckout');">
-🚀 احجز الآن
-</a>
-
-</div>
-
-<script>
-let time = 600;
-let timer = document.getElementById("timer");
-
-setInterval(()=>{
-let min = Math.floor(time/60);
-let sec = time % 60;
-timer.innerHTML = "⏳ عرض محدود: " + min + ":" + (sec<10?"0"+sec:sec);
-time--;
-if(time<0) time=600;
-},1000);
-</script>
+  <div class="trust">
+    <span>⚡ <b>رد خلال دقائق</b></span>
+    <span>✓ <b>خدمة موثوقة</b></span>
+  </div>
+</main>
 
 </body>
 </html>
