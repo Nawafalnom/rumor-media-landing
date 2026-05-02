@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Rumor for Media — عروض</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Tajawal',sans-serif;
+  background:#0a0e14;
+  display:flex;flex-direction:column;align-items:center;
+  padding:20px;
+  min-height:100vh;
+}
+.toolbar{
+  color:#94a3b8;font-size:13px;margin-bottom:16px;
+  text-align:center;line-height:1.6;
+}
+.toolbar a{color:#22d3ee;text-decoration:none}
+.poster{
+  width:1080px;height:1350px;
+  background:linear-gradient(135deg,#0e0419 0%,#2e1065 50%,#581c87 100%);
+  color:#fff;
+  padding:70px 80px;
+  display:flex;flex-direction:column;
+  position:relative;overflow:hidden;
+  box-shadow:0 30px 80px rgba(0,0,0,0.6);
+}
+.poster::before{
+  content:"";position:absolute;top:-150px;right:-150px;
+  width:500px;height:500px;
+  background:#c084fc;
+  border-radius:50%;
+  filter:blur(80px);opacity:0.4;
+}
+.poster::after{
+  content:"";position:absolute;bottom:-200px;left:-200px;
+  width:600px;height:600px;
+  background:#c084fc;
+  border-radius:50%;
+  filter:blur(100px);opacity:0.25;
+}
+.brand-row{
+  display:flex;align-items:center;gap:24px;
+  margin-bottom:50px;position:relative;z-index:2;
+}
+.logo{
+  width:110px;height:110px;
+  background:linear-gradient(135deg,#c084fc,#a855f7);
+  border-radius:28px;
+  display:grid;place-items:center;
+  font-size:60px;
+  box-shadow:0 14px 40px rgba(192,132,252,0.5);
+}
+.brand-info .name{
+  font-size:54px;font-weight:900;line-height:1.1;
+  letter-spacing:-1px;
+}
+.brand-info .tag{
+  font-size:22px;color:rgba(255,255,255,0.7);
+  margin-top:6px;
+}
+.headline{
+  font-size:74px;font-weight:900;line-height:1.1;
+  margin-bottom:18px;position:relative;z-index:2;
+  letter-spacing:-2px;
+}
+.headline .accent{color:#c084fc}
+.subhead{
+  font-size:30px;color:rgba(255,255,255,0.82);
+  margin-bottom:55px;position:relative;z-index:2;
+  font-weight:500;
+}
+.pricing{
+  display:flex;flex-direction:column;gap:14px;
+  flex:1;justify-content:center;
+  position:relative;z-index:2;
+}
+.row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:20px 32px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:all 0.2s;
+}
+.row.popular{
+  background:linear-gradient(90deg,rgba(192,132,252,0.3),rgba(192,132,252,0.1));
+  border:2px solid #c084fc;
+  position:relative;
+}
+.row.popular::before{
+  content:"🔥 الأكثر طلباً";
+  position:absolute;
+  top:-14px;right:24px;
+  background:#c084fc;
+  color:#000;
+  font-size:14px;font-weight:900;
+  padding:6px 16px;border-radius:20px;
+}
+.qty{
+  font-size:34px;font-weight:800;
+  display:flex;align-items:center;gap:12px;
+}
+.price{
+  font-size:38px;font-weight:900;
+  color:#c084fc;
+}
+.price small{
+  font-size:22px;color:rgba(255,255,255,0.6);
+  font-weight:600;
+}
+.popular .qty{font-size:38px}
+.popular .price{font-size:42px;color:#fff}
+.footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding-top:36px;
+  border-top:1px solid rgba(255,255,255,0.12);
+  margin-top:30px;position:relative;z-index:2;
+}
+.benefits{
+  display:flex;flex-direction:column;gap:8px;
+  font-size:18px;color:rgba(255,255,255,0.85);
+  font-weight:500;
+}
+.benefit{display:flex;align-items:center;gap:8px}
+.cta{
+  display:flex;align-items:center;gap:14px;
+  background:linear-gradient(135deg,#25d366,#128c7e);
+  padding:18px 32px;border-radius:18px;
+  font-size:26px;font-weight:900;
+  color:#fff;
+  box-shadow:0 12px 32px rgba(37,211,102,0.4);
+}
+@media print{body{background:transparent;padding:0}.toolbar{display:none}.poster{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="toolbar">
+  📸 لتصدير الصورة: F11 (ملء الشاشة) → Print (Ctrl+P) → Save as PDF<br>
+  أو: Right-click على البوستر → Save Image / Screenshot<br>
+  المقاس: 1080×1350 — مثالي لـ Instagram + Facebook
+</div>
+
+<div class="poster">
+  <div class="brand-row">
+    <div class="logo">📣</div>
+    <div class="brand-info">
+      <div class="name">Rumor for Media</div>
+      <div class="tag">الميديا الاحترافية</div>
+    </div>
+  </div>
+
+  <div class="headline">🔥 متابعين فيسبوك <span class="accent">حقيقيين</span></div>
+  <div class="subhead">من أنحاء العالم مع نسبة سوريين 🌍</div>
+
+  <div class="pricing">
+    <div class="row"><div class="qty">1,000 متابع</div><div class="price">240 <small>ل.س</small></div></div>
+    <div class="row"><div class="qty">5,000 متابع</div><div class="price">850 <small>ل.س</small></div></div>
+    <div class="row"><div class="qty">10,000 متابع</div><div class="price">1,330 <small>ل.س</small></div></div>
+    <div class="row popular"><div class="qty">⭐ 20,000 متابع</div><div class="price">2,450 <small>ل.س</small></div></div>
+    <div class="row"><div class="qty">50,000 متابع</div><div class="price">5,600 <small>ل.س</small></div></div>
+    <div class="row"><div class="qty">100,000 متابع</div><div class="price">10,500 <small>ل.س</small></div></div>
+  </div>
+
+  <div class="footer">
+    <div class="benefits">
+      <div class="benefit">⚡ ضمان 60 يوم</div>
+      <div class="benefit">✓ تقرير أداء + متابعة</div>
+      <div class="benefit">📞 +1 (226) 677-1434</div>
+    </div>
+    <div class="cta">💬 احجز الآن</div>
+  </div>
+</div>
+</body>
+</html>
